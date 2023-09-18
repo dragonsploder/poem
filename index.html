@@ -1,1 +1,45 @@
-<h1>Hello!</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Poem</title>
+<style type="text/css">
+#wrapper {
+	margin: auto;
+	width: 500px;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+
+
+<br />
+Stuff before <p id="textbox1">Dust</p> after.
+</div>
+
+<script>
+	nouns = ""
+
+	function getRandomInt(max) {
+  	return Math.floor(Math.random() * max);
+	}
+
+	function text1() {
+		if (getRandomInt(5) === 0) {
+			document.getElementById("textbox").innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.length)];
+		}
+	};
+
+	fetch("nounlist.txt")
+  .then((res) => res.text())
+  .then((text) => {
+  	nouns = text;
+   })
+  .catch((e) => console.error(e));
+
+	setInterval(text1, 1000);
+</script> 
+</body>
+</html>
