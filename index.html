@@ -28,7 +28,7 @@ Stuff before <p id="textbox1">Dust</p> after.
 
 	function text1() {
 		if (getRandomInt(5) === 0) {
-			document.getElementById("textbox").innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.length)];
+			document.getElementById("textbox").innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.split('\n').length)];
 		}
 	};
 
