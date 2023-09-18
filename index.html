@@ -21,7 +21,7 @@ p {
 
 <br />
 
-<h1> Dust </h1>
+<h1 id="textbox"> Dust </h1>
 
 I am <p id="textbox1">dust</p> <br>
 I was <p id="textbox2">dust</p>, I am <p id="textbox3">dust</p>, and I will be <p id="textbox4">dust</p> <br>
@@ -39,25 +39,25 @@ One, single, thing. <br>
 What is a thing. I single thing. Not many parts together but one part as many. <br>
 That thing is me, it is you, it is all, it is <p id="textbox10">dust</p> <br>
 
-One <p id="textbox10">dust</p>, two <p id="textbox11">dust</p>, red <p id="textbox12">dust</p>, blue <p id="textbox13">dust</p> <br>
+One <p id="textbox10">dust</p>, two <p id="textbox10">dust</p>, red <p id="textbox10">dust</p>, blue <p id="textbox10">dust</p> <br>
 
-Sometimes my thoughts try to escape <p id="textbox14">dust</p> <br>
-They stream down my neurons, ahem, sorry, my <p id="textbox15">dust</p> <br>
-But they are not fast enough, because what is fast, but just more <p id="textbox16">dust</p> <br>
-Speed is a concept, and a concept from <p id="textbox17">dust</p> is nothing but <p id="textbox18">dust</p> <br>
-It could be anything, yet in my <p id="textbox19">dust</p> it will always be <p id="textbox20">dust</p> <br>
+Sometimes my thoughts try to escape <p id="textbox11">dust</p> <br>
+They stream down my neurons, ahem, sorry, my <p id="textbox12">dust</p> <br>
+But they are not fast enough, because what is fast, but just more <p id="textbox13">dust</p> <br>
+Speed is a concept, and a concept from <p id="textbox14">dust</p> is nothing but <p id="textbox15">dust</p> <br>
+It could be anything, yet in my <p id="textbox16">dust</p> it will always be <p id="textbox17">dust</p> <br>
 
-Dunes of <p id="textbox21">dust</p> ever changing, shifting, there only difference between <br>
+Dunes of <p id="textbox18">dust</p> ever changing, shifting, there only difference between <br>
 Their location. <br>
 Funny that where is the only identity we have, <br>
-Not who <p id="textbox22">dust</p>, or what <p id="textbox23">dust</p>, or when <p id="textbox24">dust</p>, or why <p id="textbox25">dust</p>, or even how <p id="textbox0">dust</p>. <br>
-But where <p id="textbox26">dust</p>. <br>
-“Where <p id="textbox27">dust</p>?” He screamed. <br>
+Not who <p id="textbox19">dust</p>, or what <p id="textbox20">dust</p>, or when <p id="textbox21">dust</p>, or why <p id="textbox22">dust</p>, or even how <p id="textbox23">dust</p>. <br>
+But where <p id="textbox24">dust</p>. <br>
+“Where <p id="textbox25">dust</p>?” He screamed. <br>
 
-At himself? At the <p id="textbox28">dust</p>? <br>
-I guess only the <p id="textbox29">dust</p> knows. <br>
+At himself? At the <p id="textbox26">dust</p>? <br>
+I guess only the <p id="textbox27">dust</p> knows. <br>
 And it will take it to the grave. <br>
-An old, rotten, forgotten, decrepit, <p id="textbox30">dust</p> grave at the end of the universe. <br>
+An old, rotten, forgotten, decrepit, <p id="textbox28">dust</p> grave at the end of the universe. <br>
 
 All who care long forgotten. <br>
 But it matters not, because even without memory; <br>
@@ -73,8 +73,10 @@ I am dust
 	}
 
 	function text1() {
-		if (getRandomInt(5) === 0) {
-			document.getElementById("textbox" + String(getRandomInt(31))).innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.split('\n').length)];
+		if (getRandomInt(8) === 0) {
+			textbox = "textbox" + String(getRandomInt(29))
+			document.getElementById(textbox).innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.split('\n').length)];
+			document.getElementById(textbox).style.color = "blue"; 
 		}
 	};
 
@@ -85,7 +87,10 @@ I am dust
    })
   .catch((e) => console.error(e));
 
-	setInterval(text1, 100);
+	for (let i = 0; i < 50; i++) {
+		text1()
+	} 
+	setInterval(text1, 10);
 </script> 
 </body>
 </html>
