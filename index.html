@@ -76,13 +76,14 @@ I am dust
 		if (getRandomInt(8) === 0) {
 			textbox = "textbox" + String(getRandomInt(29))
 			if (textbox === "textbox10") {
-				document.getElementById("textbox10a").innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.split('\n').length)];
+				noun = nouns.split('\n')[Math.floor(Math.random() * nouns.split('\n').length)]; 
+				document.getElementById("textbox10a").innerHTML = noun;
 				document.getElementById("textbox10a").style.color = "blue"; 
-				document.getElementById("textbox10b").innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.split('\n').length)];
+				document.getElementById("textbox10b").innerHTML = noun;
 				document.getElementById("textbox10b").style.color = "blue"; 
-				document.getElementById("textbox10c").innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.split('\n').length)];
+				document.getElementById("textbox10c").innerHTML = noun;
 				document.getElementById("textbox10c").style.color = "blue"; 
-				document.getElementById("textbox10d").innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.split('\n').length)];
+				document.getElementById("textbox10d").innerHTML = noun;
 				document.getElementById("textbox10d").style.color = "blue"; 
 			} else {
 				document.getElementById(textbox).innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.split('\n').length)];
