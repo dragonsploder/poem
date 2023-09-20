@@ -39,7 +39,7 @@ One, single, thing. <br>
 What is a thing. I single thing. Not many parts together but one part as many. <br>
 That thing is me, it is you, it is all, it is <p id="textbox10">dust</p> <br>
 
-One <p id="textbox10">dust</p>, two <p id="textbox10">dust</p>, red <p id="textbox10">dust</p>, blue <p id="textbox10">dust</p> <br>
+One <p id="textbox10a">dust</p>, two <p id="textbox10b">dust</p>, red <p id="textbox10c">dust</p>, blue <p id="textbox10d">dust</p> <br>
 
 Sometimes my thoughts try to escape <p id="textbox11">dust</p> <br>
 They stream down my neurons, ahem, sorry, my <p id="textbox12">dust</p> <br>
@@ -75,8 +75,19 @@ I am dust
 	function text1() {
 		if (getRandomInt(8) === 0) {
 			textbox = "textbox" + String(getRandomInt(29))
-			document.getElementById(textbox).innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.split('\n').length)];
-			document.getElementById(textbox).style.color = "blue"; 
+			if (textbox === "textbox10") {
+				document.getElementById("textbox10a").innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.split('\n').length)];
+				document.getElementById("textbox10a").style.color = "blue"; 
+				document.getElementById("textbox10b").innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.split('\n').length)];
+				document.getElementById("textbox10b").style.color = "blue"; 
+				document.getElementById("textbox10c").innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.split('\n').length)];
+				document.getElementById("textbox10c").style.color = "blue"; 
+				document.getElementById("textbox10d").innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.split('\n').length)];
+				document.getElementById("textbox10d").style.color = "blue"; 
+			} else {
+				document.getElementById(textbox).innerHTML = nouns.split('\n')[Math.floor(Math.random() * nouns.split('\n').length)];
+				document.getElementById(textbox).style.color = "blue"; 
+			}
 		}
 	};
 
